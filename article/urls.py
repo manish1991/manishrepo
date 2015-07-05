@@ -4,12 +4,8 @@ from django.contrib import admin
 from art.views import home, detail_page
 
 urlpatterns = [
-    # Examples:
-    # url(r'^$', 'article.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', home),
-    url(r'^article/details/(?P<article_id>\d+)/$', detail_page),
+    url(r'^admin/', include(admin.site.urls)),               #Url to login to admin dashboard with admin user credentials.
+    url(r'^$', home),                                        #Url of the home page  where all the Articles available are listed.                            
+    url(r'^article/details/(?P<article_id>\d+)/$', detail_page), #Url of the Article details page,where we can see Article's details.
     
 ]
