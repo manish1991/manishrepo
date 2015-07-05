@@ -1,0 +1,15 @@
+.navigation_bar
+{
+	height: 130px;
+	width: 70%;
+    border: 1px solid;
+}
+
+.nav-1, .nav-2, .nav-3, .nav-4 {
+	height: 100px;
+	width: 20%;
+    border: 1px solid;
+    display: inline-block;
+    margin:10px;
+    cursor: pointer;	
+}
