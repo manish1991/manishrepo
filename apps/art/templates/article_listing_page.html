@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Listing Page
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
+{% block content %}
+
+<h3><b>All Articles </b></h3></br></br>
+
+{% for article in articles %}
+	<h3><b><i>{{ forloop.counter }}</i></b></h3>
+	<b>Title: </b>{{article.title}}</br>
+	<b>author: </b>{{article.author}}</br>
+	<b>publication: </b>{{article.publication}}</br>
+	<b>category: </b>{{article.category}}</br>
+{% comment %}	<b>hero_image: </b><img src='{{article.hero_image}}' height=100px width=100px></br>
+	<b>optional_image: </b><img src='{{article.optional_image}}' height=100px width=100px></br>
+	{% endcomment %}<b>body_text: </b>{{article.body_text|truncatechars:70}}
+	<a href='/article/details/{{article.id}}/'>Go to detail page</a>
+	</br><hr>
+
+{% endfor %}
+
+{% endblock %}

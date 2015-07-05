@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+		Article -
+		 {% block title %}
+        {% endblock %}
+    </title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="/static/css/common.css" rel="stylesheet">
+    {% block script %}
+     {% endblock %}
+  </head>
+
+  <body>
+  <h3>Navigation</h3>
+  <div class='navigation_bar'>
+  	<div class="nav-1">
+	  	{{articles.0.title}}</br>
+	  	<img src='{{articles.0.hero_image}}' height=65px width=75px />
+	  	<a href='/article/details/{{articles.0.id}}'>Go to detail </a>
+  	</div>
+  	<div class="nav-2">
+	  	{{articles.1.title}}</br>
+	  	<img src='{{articles.1.hero_image}}' height=65px width=75px />
+	  	<a href='/article/details/{{articles.1.id}}'>Go to detail </a>
+  	</div>
+  	<div class="nav-3">
+	  	{{articles.2.title}}</br>
+	  	<img src='{{articles.2.hero_image}}' height=65px width=75px />
+	  	<a href='/article/details/{{articles.2.id}}'>Go to detail </a>
+  	</div>
+  	<div class="nav-4">
+	  	{{articles.3.title}}</br>
+	  	<img src='{{articles.3.hero_image}}' height=65px width=75px />
+	  	<a href='/article/details/{{articles.3.id}}'>Go to detail </a>
+  	</div>
+  </div>
+
+  </br><hr>
+	  {% block content %}
+	  {% endblock %}
+<div class='navigation_bar'>
+  	<div class="nav-1">
+	  	{{random_article.0.title}}</br>
+	  	<img src='{{random_article.0.hero_image}}' height=65px width=75px />
+	  	<a href='/article/details/{{random_article.0.id}}'>Go to detail </a>
+  	</div>
+  	<div class="nav-2">
+	  	{{random_article.1.title}}</br>
+	  	<img src='{{random_article.1.hero_image}}' height=65px width=75px />
+	  	<a href='/article/details/{{random_article.1.id}}'>Go to detail </a>
+  	</div>
+  	<div class="nav-3">
+	  	{{random_article.2.title}}</br>
+	  	<img src='{{random_article.2.hero_image}}' height=65px width=75px />
+	  	<a href='/article/details/{{random_article.2.id}}'>Go to detail </a>
+  	</div>
+  	<div class="nav-4">
+	  	{{random_article.3.title}}</br>
+	  	<img src='{{random_article.3.hero_image}}' height=65px width=75px />
+	  	<a href='/article/details/{{random_article.3.id}}'>Go to detail </a>
+  	</div>
+
+
+  </div>
+
+
+
+  </body>
+		s
